@@ -615,7 +615,7 @@
 					<?php } ?>
 					<div class="pmpro_checkout-field pmpro_payment-account-number">
 						<label for="AccountNumber"><?php _e('Card Number', 'paid-memberships-pro' );?></label>
-						<input id="AccountNumber" class="input <?php echo pmpro_getClassForField("AccountNumber");?>" type="text" size="25" value="<?php echo esc_attr($AccountNumber)?>" autocomplete="off" />
+						<input id="AccountNumber" class="input <?php echo pmpro_getClassForField("AccountNumber");?>" type="number" size="25" value="<?php echo esc_attr($AccountNumber)?>" autocomplete="off" />
 					</div>
 					<div class="pmpro_checkout-field pmpro_payment-expiration">
 						<label for="ExpirationMonth"><?php _e('Expiration Date', 'paid-memberships-pro' );?></label>
@@ -644,7 +644,7 @@
 						if($pmpro_show_cvv) { ?>
 						<div class="pmpro_checkout-field pmpro_payment-cvv">
 							<label for="CVV"><?php _e('Security Code (CVC)', 'paid-memberships-pro' );?></label>
-							<input id="CVV" type="text" size="4" value="<?php if(!empty($_REQUEST['CVV'])) { echo esc_attr(sanitize_text_field($_REQUEST['CVV'])); }?>" class="input <?php echo pmpro_getClassForField("CVV");?>" />  <small>(<a href="javascript:void(0);" onclick="javascript:window.open('<?php echo pmpro_https_filter(PMPRO_URL)?>/pages/popup-cvv.html','cvv','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=600, height=475');"><?php _e("what's this?", 'paid-memberships-pro' );?></a>)</small>
+							<input id="CVV" type="number" size="4" value="<?php if(!empty($_REQUEST['CVV'])) { echo esc_attr(sanitize_text_field($_REQUEST['CVV'])); }?>" class="input <?php echo pmpro_getClassForField("CVV");?>" />  <small>(<a href="javascript:void(0);" onclick="javascript:window.open('<?php echo pmpro_https_filter(PMPRO_URL)?>/pages/popup-cvv.html','cvv','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=600, height=475');"><?php _e("what's this?", 'paid-memberships-pro' );?></a>)</small>
 						</div>
 					<?php } ?>
 					<?php if($pmpro_show_discount_code) { ?>
